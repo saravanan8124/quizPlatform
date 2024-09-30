@@ -1,0 +1,95 @@
+.choice-container {
+  display: flex;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  font-size: 1.8rem;
+  border: 0.1rem solid rgba(34, 193, 195, 0.25); /* Teal border */
+  background-color: #ffffff; /* White background */
+  border-radius: 0.5rem; /* Rounded corners */
+  transition: box-shadow 150ms, transform 150ms; /* Smooth transition */
+}
+
+.choice-container:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem rgba(34, 193, 195, 0.5); /* Teal shadow */
+  transform: translateY(-0.1rem);
+}
+
+.choice-prefix {
+  padding: 1.5rem 2.5rem;
+  background-color: #22c1c3; /* Teal */
+  color: white;
+  border-top-left-radius: 0.5rem; /* Rounded corners */
+  border-bottom-left-radius: 0.5rem; /* Rounded corners */
+}
+
+.choice-text {
+  padding: 1.5rem;
+  width: 100%;
+  background-color: #f1f1f1; /* Light gray background for text */
+  border-top-right-radius: 0.5rem; /* Rounded corners */
+  border-bottom-right-radius: 0.5rem; /* Rounded corners */
+}
+
+.correct {
+  background-color: #4caf50; /* Green for correct answers */
+}
+
+.incorrect {
+  background-color: #f44336; /* Red for incorrect answers */
+}
+
+/* HUD */
+
+#hud {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem; /* Spacing below HUD */
+}
+
+.hud-prefix {
+  text-align: center;
+  font-size: 2rem;
+  color: #22c1c3; /* Teal for HUD prefix */
+}
+
+.hud-main-text {
+  text-align: center;
+  font-size: 2.4rem; /* Slightly larger font size */
+  color: #333; /* Dark gray text */
+}
+
+#progressBar {
+  width: 20rem;
+  height: 4rem;
+  border: 0.3rem solid #22c1c3; /* Teal border */
+  margin-top: 1.5rem;
+  border-radius: 0.5rem; /* Rounded corners */
+  overflow: hidden; /* Ensure rounded corners on full bar */
+}
+
+#progressBarFull {
+  height: 100%; /* Full height */
+  background-color: #22c1c3; /* Teal for progress */
+  width: 0%; /* Start at 0% */
+}
+
+/* LOADER */
+
+#loader {
+  border: 1.6rem solid white;
+  border-radius: 50%;
+  border-top: 1.6rem solid #22c1c3; /* Teal for loader top */
+  width: 12rem;
+  height: 12rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
